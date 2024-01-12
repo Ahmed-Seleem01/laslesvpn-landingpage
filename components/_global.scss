@@ -1,0 +1,53 @@
+@import "./mixins";
+
+.button {
+  padding: 1.75rem 7.75rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  box-shadow: 0 2rem 5rem 0rem var(--color-soft-red-shadow);
+  background-color: var(--color-soft-red);
+  color: var(--color-white);
+  border-radius: var(--default-radius);
+  // line-height: 1.562;
+
+  &--secondary {
+    background-color: var(--color-white);
+    border-radius: calc(var(--default-radius) * 5);
+    color: var(--color-soft-red);
+    font-weight: 500;
+    border: 1px solid var(--color-soft-red);
+    box-shadow: none;
+    padding: 1.3rem 4.5rem;
+  }
+}
+
+.span {
+  display: inline-block;
+  color: var(--color-grayish-blue);
+  // line-height: 1.2;
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-bold {
+    font-weight: 700;
+    color: var(--color-very-dark-blue);
+  }
+}
+
+.list {
+  @include flex-container;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--color-grayish-blue);
+
+  li {
+    @include flex-container;
+    gap: calc(var(--default-padding) / 2);
+    // line-height: 2.145;
+  }
+}

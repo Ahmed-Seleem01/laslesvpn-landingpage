@@ -1,0 +1,14 @@
+@import "./mixins";
+.container {
+  margin: 0 auto;
+  max-width: var(--desktop-width);
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  position: relative;
+
+  @include mobile-tablet{
+    padding: var(--default-padding);
+    border: 2px solid ;
+    // background-color: red;
+  }
+}

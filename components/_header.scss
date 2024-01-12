@@ -1,0 +1,60 @@
+@import "./mixins";
+
+.header {
+  position: fixed;
+  top: 0;
+  width: var(--desktop-width);
+  z-index: 2;
+  background-color: var(--color-white);
+  @include flex-container;
+  justify-content: space-between;
+  padding: var(--default-padding) 0;
+  line-height: 1.185;
+  margin: 0 auto;
+
+@include mobile-tablet{
+  flex-wrap: wrap;
+  padding: var(--default-padding);
+  width: 100%;
+  border: 1px solid;
+  left: 0;
+}
+
+  &__logo {
+    @include flex-container;
+    gap: calc(var(--default-padding) / 2);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-very-dark-blue);
+
+    span {
+      margin-left: -1rem;
+    }
+  }
+
+  &__nav {
+    &-list {
+      @include flex-container;
+      gap: calc(var(--default-padding) * 2);
+      color: var(--color-grayish-blue);
+      
+      @include mobile-tablet{
+        flex-wrap: wrap;
+      }
+    }
+    a:hover{
+      color: var(--color-soft-red)
+    }
+  }
+
+  &__sign {
+    @include flex-container;
+    gap: 3rem;
+    font-weight: 500;
+    color: var(--color-very-dark-blue);
+    &-link{
+      line-height: 1.185;
+
+    }
+  }
+}
