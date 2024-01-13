@@ -1,0 +1,36 @@
+@import "./mixins";
+
+.section.about {
+  justify-content: center;
+  margin-top: calc(var(--default-padding) * 3.5);
+  gap: 4rem;
+  .section__content {
+    max-width: 55.5rem;
+    &-title {
+      font-size: 5rem;
+      font-weight: 500;
+    }
+
+    &-description {
+      margin-top: var(--default-padding);
+      margin-bottom: calc(var(--default-padding) * 2.5);
+    }
+  }
+
+  .section__imgContainer {
+    margin-right: -6.7rem;
+    flex: 1;
+    min-width: 40rem;
+    max-width: 61.1rem;
+
+    @include mobile-tablet {
+      order: -1;
+      margin-right: 0;
+      min-width: auto;
+    }
+
+    &-img {
+      width: 100%;
+    }
+  }
+}

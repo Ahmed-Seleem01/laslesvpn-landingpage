@@ -6,7 +6,7 @@
   padding: 3.7rem 9.1rem;
   font-size: 2rem;
   border-radius: var(--default-radius);
-  box-shadow: 0 2.4rem 4rem 0rem #0d102511;
+  box-shadow: 0 2rem 5rem 0.5rem #0d102511;
   margin-top: 10.3rem;
   margin-bottom: 9.6rem;
 
@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    gap: calc(var(--default-padding) *1.5);
   }
 
   &__statistics {
@@ -32,16 +32,21 @@
         font-size: 2.5rem;
       }
     }
-  }
 
-  &__separator {
-    height: 12.5rem;
-    width: 2px;
-    background-color: #eeeff2;
+    &:nth-of-type(2) {
+      flex: 1;
+      height: 12.5rem;
+      max-width: 43rem;
+      border-right: 2px solid #eeeff2;
+      border-left: 2px solid #eeeff2;
+      justify-content: center;
 
-    @include mobile-tablet {
-      transform: rotateZ(90deg) ;
-      // height: 20rem;
+      @include mobile-tablet {
+        border: none;
+        border-top: 2px solid #eeeff2;
+        border-bottom: 2px solid #eeeff2;
+        padding: var(--default-padding);
+      }
     }
   }
 }

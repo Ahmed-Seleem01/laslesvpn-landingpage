@@ -1,0 +1,16 @@
+.section.subscribe {
+  margin-top: 6.5rem;
+  padding: 5.8rem 7rem;
+  background-color: var(--color-white);
+  box-shadow: 0 1.5rem 4rem 0rem #0d102511;
+
+  .section__content {
+    max-width: 41rem;
+
+    &-title {
+      max-width: 37.1rem;
+      margin-bottom: var(--default-padding);
+      line-height: 1.288;
+    }
+  }
+}

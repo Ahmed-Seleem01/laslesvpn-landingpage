@@ -1,0 +1,43 @@
+@import "./mixins";
+
+.section.features {
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 13.1rem;
+
+  .section__imgContainer {
+    margin-left: 3.05rem;
+    max-width: 50.8 rem;
+    
+    @include mobile-tablet {
+      margin-left: 0;
+    }
+    &-img {
+      width: 100%;
+    }
+  }
+
+  .section__content {
+    max-width: 43rem;
+    &-title {
+      font-size: 3.5rem;
+    }
+
+    &-description {
+      margin: var(--default-padding) 0;
+    }
+
+    &-list {
+      @include mobile-tablet {
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+
+    &-item::before {
+      content: url("../images/right-icon.svg");
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
