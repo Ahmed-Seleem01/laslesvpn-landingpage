@@ -13,8 +13,9 @@
   @include mobile-tablet {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 3rem;
+    margin-top: 0;
+    padding-top: var(--default-padding);
   }
 
   &::before {
@@ -35,14 +36,7 @@
     gap: 3rem;
 
     @include mobile-tablet {
-      @include flex-container;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    &-logo{
-      // justify-content: center;
+      align-self: flex-start;
     }
 
     &-description {
@@ -51,6 +45,7 @@
 
     &-icons {
       @include flex-container;
+      align-self: flex-start;
       gap: var(--default-padding);
       justify-content: flex-start;
     }
@@ -73,14 +68,16 @@
     @include flex-container;
     align-items: flex-start;
     justify-content: space-between;
+    gap: var(--default-padding);
 
-    @include mobile-tablet{
-     width: 100%;
+    @include mobile-tablet {
+      width: 100%;
     }
 
     &-title {
       line-height: 1.88;
       font-weight: 500;
+      text-wrap: nowrap;
     }
 
     &-list {

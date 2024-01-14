@@ -1,37 +1,41 @@
 @import "./mixins";
 
 .section.network {
-    .section__content {
-      &-title {
-        margin-top: calc(var(--default-padding) * -3.3);
-      }
+  .section__content {
+    margin-top: calc(var(--default-padding) * -3.3);
+    margin-bottom: calc(var(--default-padding) * 7.5);
 
-      &-description {
-        margin-top: var(--default-padding);
-        margin-bottom: calc(var(--default-padding) * 7.5);
-      }
+    @include mobile-tablet {
+      margin-top: calc(var(--default-padding) * -4);
+      margin-bottom: calc(var(--default-padding) * 2);
     }
 
-    .section__imgContainer {
-      width: 100%;
-
-      &-img {
-        width: 100%;
-      }
-    }
-
-    .section__network {
-      width: 100%;
-      @include flex-container;
-      justify-content: space-between;
-      margin-top: 3.5rem;
-      flex-wrap: wrap;
-
-      @include mobile-tablet {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: var(--default-padding);
-      }
+    &-description {
+      margin-top: var(--default-padding);
     }
   }
+  .section__imgContainer {
+    width: 100%;
+
+    &-img {
+      width: 100%;
+    }
+  }
+
+  .section__networkBrands {
+    width: 100%;
+    @include flex-container;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+    flex-wrap: wrap;
+
+    @include mobile-tablet {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--default-padding);
+    }
+  }
+}

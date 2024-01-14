@@ -5,10 +5,15 @@
   justify-content: space-between;
   margin-bottom: 13.1rem;
 
+  @include mobile-tablet {
+    align-items: center;
+    gap: calc(var(--default-padding) * 2);
+  }
+
   .section__imgContainer {
     margin-left: 3.05rem;
     max-width: 50.8 rem;
-    
+
     @include mobile-tablet {
       margin-left: 0;
     }

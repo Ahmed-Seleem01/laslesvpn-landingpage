@@ -3,6 +3,12 @@
   align-items: center;
 }
 
+@mixin laptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin mobile-tablet {
   @media (max-width: 800px) {
     @content;

@@ -5,7 +5,10 @@
   font-size: 1.6rem;
   margin: 0 auto;
   padding-inline: 10.9rem;
-  border: 1px solid;
+
+  @include laptop {
+    padding-inline: 5rem;
+  }
   @include mobile-tablet {
     padding-inline: var(--default-padding);
   }

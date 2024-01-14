@@ -1,7 +1,6 @@
 @import "./mixins";
 
 .section.about {
-  justify-content: center;
   margin-top: calc(var(--default-padding) * 3.5);
   gap: 4rem;
   .section__content {
